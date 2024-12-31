@@ -1,0 +1,45 @@
+/* Container styles */
+#natural-reminders-root {
+  position: fixed;
+  top: 0;
+  right: 0;
+  z-index: 2147483647; /* Maximum z-index value */
+}
+
+/* Animation classes */
+.slide-enter {
+  transform: translateX(100%);
+}
+
+.slide-enter-active {
+  transform: translateX(0);
+  transition: transform 300ms ease-in-out;
+}
+
+.slide-exit {
+  transform: translateX(0);
+}
+
+.slide-exit-active {
+  transform: translateX(100%);
+  transition: transform 300ms ease-in-out;
+}
+
+/* Panel styles */
+.natural-reminders-panel {
+  position: fixed;
+  top: 0;
+  right: 0;
+  width: 400px;
+  height: 100vh;
+  background: white;
+  box-shadow: -2px 0 8px rgba(0, 0, 0, 0.15);
+  overflow-y: auto;
+}
+
+/* Dark mode support */
+@media (prefers-color-scheme: dark) {
+  .natural-reminders-panel {
+    background: #1F2937;
+  }
+} 

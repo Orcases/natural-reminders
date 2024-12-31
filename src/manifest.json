@@ -1,0 +1,35 @@
+{
+  "manifest_version": 3,
+  "name": "Natural Reminders",
+  "description": "Create reminders using natural language - just type what you want to be reminded about!",
+  "version": "1.0.0",
+  "icons": {
+    "34": "src/assets/img/icon-34.png",
+    "128": "src/assets/img/icon-128.png"
+  },
+  "action": {
+    "default_icon": "src/assets/img/icon-34.png"
+  },
+  "permissions": [
+    "alarms",
+    "notifications",
+    "storage",
+    "activeTab",
+    "scripting"
+  ],
+  "background": {
+    "service_worker": "src/pages/Background/index.ts",
+    "type": "module"
+  },
+  "content_scripts": [{
+    "matches": ["<all_urls>"],
+    "js": ["src/pages/Content/index.ts"],
+    "css": ["src/pages/Content/content.css"]
+  }],
+  "web_accessible_resources": [
+    {
+      "resources": ["src/assets/img/*"],
+      "matches": ["<all_urls>"]
+    }
+  ]
+}

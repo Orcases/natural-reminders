@@ -1,0 +1,36 @@
+{
+  "compilerOptions": {
+    "target": "ESNext",
+    "module": "ESNext",
+    "moduleResolution": "node",
+    "jsx": "react-jsx",
+    "strict": true,
+    "skipLibCheck": true,
+    "esModuleInterop": true,
+    "allowSyntheticDefaultImports": true,
+    "forceConsistentCasingInFileNames": true,
+    "resolveJsonModule": true,
+    "baseUrl": ".",
+    "paths": {
+      "@natural/*": ["src/*"],
+      "@natural/assets/*": ["src/assets/*"],
+      "@natural/static/*": ["static/*"],
+      "@natural/ui/*": ["src/ui/*"],
+      "@natural/layouts/*": ["src/ui/layouts/*"],
+      "@natural/styles/*": ["src/ui/styles/*"],
+      "@natural/components/*": ["src/components/*"],
+      "@natural/pages/*": ["src/pages/*"],
+      "@natural/services/*": ["src/services/*"],
+      "@natural/hooks/*": ["src/hooks/*"],
+      "@natural/context/*": ["src/context/*"],
+      "@natural/types/*": ["src/types/*"],
+      "@natural/utils/*": ["src/utils/*"],
+      "@natural/constants/*": ["src/constants/*"],
+      "@natural/config/*": ["src/config/*"],
+      "@natural/env/*": ["src/env/*"]
+    },
+    "types": ["chrome", "node"]
+  },
+  "include": ["src/**/*", "vite.config.ts"],
+  "references": [{ "path": "./tsconfig.node.json" }]
+}

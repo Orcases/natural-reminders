@@ -1,0 +1,22 @@
+name: natural
+
+services:
+  natural:
+    build: .
+    container_name: reminders
+    ports:
+      - "5173:5173"  # Vite dev server
+      - "3000:3000"  # API server (optional)
+    volumes:
+      - .:/app
+      - node_modules:/app/node_modules
+    environment:
+      - NODE_ENV=development
+      - CHOKIDAR_USEPOLLING=true  # Enable hot reload in Docker
+      - VITE_HOST=0.0.0.0  # Allow external connections
+      - WATCHPACK_POLLING=true  # Enable polling for file changes
+    stdin_open: true
+    tty: true
+
+volumes:
+  node_modules:

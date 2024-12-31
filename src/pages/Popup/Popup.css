@@ -1,0 +1,140 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+  width: 350px;
+  min-height: 400px;
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: rgba(156, 163, 175, 0.5);
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background-color: rgba(156, 163, 175, 0.8);
+}
+
+:root {
+  --category-default: #6B7280;
+  --category-selected: var(--category-color, var(--category-default));
+}
+
+/* Custom styles for input placeholder */
+input::placeholder {
+  color: #9CA3AF;
+}
+
+/* Hover effects for buttons */
+button:hover {
+  opacity: 0.8;
+}
+
+/* Smooth transitions */
+.transition-all {
+  transition: all 0.2s ease-in-out;
+}
+
+/* Category specific styles */
+.reminder-item[data-category] {
+  position: relative;
+  border: 2px solid var(--category-color, #d2d4d8);
+  border-radius: 25px;
+  padding: 0.5rem;
+}
+
+/* Color for category icons everywhere */
+[data-category] .category-icon {
+  color: var(--category-color, #6B7280);
+}
+
+.category-icon {
+  color: var(--category-selected);
+}
+
+.category-item {
+  color: var(--category-color, #6B7280);
+}
+
+.category-item .category-icon {
+  color: var(--category-color, #6B7280);
+}
+
+.category-selector {
+  color: var(--category-color, #6B7280);
+}
+
+/* Category dropdown styles */
+.category-dropdown {
+  background: white;
+  border-radius: 25px;
+  overflow: hidden;
+  z-index: 50;
+}
+
+.category-dropdown button {
+  background: white;
+  width: 100%;
+  text-align: left;
+}
+
+.category-dropdown button:first-child {
+  border-top-left-radius: 25px;
+  border-top-right-radius: 25px;
+}
+
+.category-dropdown button:last-child {
+  border-bottom-left-radius: 25px;
+  border-bottom-right-radius: 25px;
+}
+
+/* Dark mode overrides */
+.dark .category-dropdown {
+  background: #1F2937;
+}
+
+.dark .category-dropdown button {
+  background: #1F2937;
+}
+
+/* Popup specific styles */
+.popup-container {
+  width: 400px;
+  max-height: 600px;
+  overflow-y: auto;
+}
+
+/* Scrollbar styles */
+.popup-container::-webkit-scrollbar {
+  width: 8px;
+}
+
+.popup-container::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+.popup-container::-webkit-scrollbar-thumb {
+  background-color: rgba(156, 163, 175, 0.5);
+  border-radius: 20px;
+  border: 2px solid transparent;
+}
+
+.dark .popup-container::-webkit-scrollbar-thumb {
+  background-color: rgba(75, 85, 99, 0.5);
+}
