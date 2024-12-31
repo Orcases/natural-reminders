@@ -31,6 +31,8 @@ npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
 pnpm-debug.log*
+container_debug.md*
+container_errors.md*
 
 # Testing
 coverage/
